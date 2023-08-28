@@ -12,7 +12,7 @@ contract OmniCounter is NonblockingLzApp {
 
     constructor(address _lzEndpoint) NonblockingLzApp(_lzEndpoint) {}
 
-    function _nonblockingLzReceive(uint16, bytes memory, uint64, bytes memory) internal override {
+    function _blockingLzReceive(uint16, bytes memory, uint64, bytes memory) internal override {
         counter += 1;
     }
 
